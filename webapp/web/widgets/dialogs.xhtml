@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+
+<ui:composition xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <!-- the logon dialog -->
+    <p:dialog id="logindialog" widgetVar="pnlUserLogin"
+              modal="true" dynamic="true"
+              showHeader="true" header="Sign in with your Ticket Master account..."
+              resizable="false" closable="false" draggable="false"
+              showEffect="fade" hideEffect="fade">
+
+        <h:form>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         columnClasses="label, value"
+                         styleClass="fullWidth smallText">
+                <h:outputLabel for="username" value="UserName:"/>
+                <p:inputText id="username"
+                             label="username"
+                             value="#{userController.logonCredentials.userName}"
+                             required="true"
+                             requiredMessage="Please specifiy a valid username!"/>
+
+                <h:outputLabel for="password" value="Password:"/>
+                <p:inputText id="password"
+                             label="password"
+                             value="#{userController.logonCredentials.password}"
+                             required="true"
+                             requiredMessage="Please provide a valid password!"
+                             type="password"/>
+
+            </h:panelGrid>
+
+            <p:separator/>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         styleClass="fullWidth"
+                         columnClasses="smallText leftAligned,smallText rightAligned">
+
+                <p:commandButton value="login"
+                                 update="messages,:userCtrl,:frmEventDetails"
+                                 actionListener="#{userController.Login}"
+                                 oncomplete="handleLoginRequest(xhr, status, args)"/>
+                <p:commandButton value="exit"
+                                 onclick="pnlUserLogin.hide();"/>
+
+            </h:panelGrid>
+
+        </h:form>
+
+    </p:dialog>
+
+    <!-- the registration wizard -->
+    <p:dialog id="registrationwizard" widgetVar="wzdUserRegistration"
+              modal="true" dynamic="true"
+              showHeader="true" header="Create a new Ticket Master account..."
+              resizable="false" closable="true" draggable="false"
+              showEffect="fade" hideEffect="fade">
+
+        <h:form>
+
+            <p:wizard showNavBar="false" showStepStatus="false" widgetVar="regWzd">
+
+                <p:tab title="Person">
+
+                    <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                 columnClasses="label, value"
+                                 styleClass="fullWidth smallText">
+
+                        <h:outputLabel for="salutation" value="Salutation:"/>
+                        <p:inputText id="salutation"
+                                     label="salutation"
+                                     required="true"
+                                     requiredMessage="Please enter a salutation!"
+                                     value="#{userController.newUser.profileData.salutation}"/>
+
+                        <h:outputLabel for="firstname" value="FirstName:"/>
+                        <p:inputText id="firstname"
+                                     label="firstname"
+                                     required="true"
+                                     requiredMessage="Please enter your firstname!"
+                                     value="#{userController.newUser.profileData.firstName}"/>
+
+                        <h:outputLabel for="lastname" value="LastName:"/>
+                        <p:inputText id="lastname"
+                                     label="lastname"
+                                     required="true"
+                                     requiredMessage="Please enter your lastname!"
+                                     value="#{userController.newUser.profileData.lastName}"/>
+
+                        <h:outputLabel for="gendertype" value="Gender:"/>
+                        <p:selectOneMenu id="gendertype"
+                                         value="#{userController.newUser.profileData.genderType}"
+                                         required="true"
+                                         requiredMessage="Please choose your gendertype!"
+                                         effect="fade">
+
+                            <f:selectItems value="#{userController.newUser.genderTypes}"/>
+                        </p:selectOneMenu>
+
+                        <h:outputLabel for="birthdate" value="Birthdate:"/>
+                        <p:calendar id="birthdate" mode="popup" showOn="button"
+                                    popupIconOnly="true"
+                                    showButtonPanel="true"
+                                    required="true"
+                                    requiredMessage="Please enter your birthdate!"
+                                    value="#{userController.newUser.birthdate}"
+                                    effect="fade"/>
+                    </h:panelGrid>
+
+                    <p:separator/>
+
+                    <h:panelGrid columns="2"
+                                 styleClass="fullWidth"
+                                 columnClasses="smallText leftAligned, smallText rightAligned">
+
+                        <p:commandButton value="Back" update="messages"
+                                         disabled="true"
+                                         onclick="regWzd.back();"/>
+                        <p:commandButton value="Next" update="messages"
+                                         onclick="regWzd.next();"/>
+
+                    </h:panelGrid>
+
+                </p:tab>
+
+                <p:tab title="Default Address">
+
+                    <!-- shipping address -->
+                    <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                 columnClasses="label, value"
+                                 styleClass="fullWidth smallText">
+
+                        <h:outputLabel for="addressline" value="Address Line:"/>
+                        <p:inputText id="addressline"
+                                     required="true"
+                                     requiredMessage="Please enter your shipping address!"
+                                     value="#{userController.newUser.shippingAddress.addressLine}"/>
+
+                        <h:outputLabel for="streetname" value="Street Name:"/>
+                        <p:inputText id="streetname"
+                                     required="true"
+                                     requiredMessage="Please enter your shipping street name!"
+                                     value="#{userController.newUser.shippingAddress.streetName}"/>
+
+                        <h:outputLabel for="cityname" value="City Name:"/>
+                        <p:inputText id="cityname"
+                                     required="true"
+                                     requiredMessage="Please enter your shipping city name!"
+                                     value="#{userController.newUser.shippingAddress.cityName}"/>
+
+                        <h:outputLabel for="zipcode" value="Zip Code:"/>
+                        <p:inputText id="zipcode"
+                                     required="true"
+                                     requiredMessage="Please enter your shipping zip code!"
+                                     value="#{userController.newUser.shippingAddress.zipCode}"/>
+
+                        <h:outputLabel for="district" value="District Code:"/>
+                        <p:inputText id="district"
+                                     required="true"
+                                     requiredMessage="Please enter your shipping district code!"
+                                     value="#{userController.newUser.shippingAddress.district}"/>
+
+                        <h:outputLabel for="country" value="Country:"/>
+                        <h:outputText id="country"
+                                      value="#{userController.newUser.shippingAddress.country.name}"/>
+
+                    </h:panelGrid>
+
+                    <p:separator/>
+
+                    <h:panelGrid columns="2"
+                                 styleClass="fullWidth"
+                                 columnClasses="smallText leftAligned, smallText rightAligned">
+
+                        <p:commandButton value="Back" update="messages"
+                                         onclick="regWzd.back();"/>
+                        <p:commandButton value="Next" update="messages"
+                                         onclick="regWzd.next();"/>
+
+                    </h:panelGrid>
+
+                </p:tab>
+
+                <p:tab title="User Account">
+
+                    <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                 columnClasses="label, value"
+                                 styleClass="fullWidth smallText">
+
+                        <h:outputLabel for="email" value="email:"/>
+                        <p:inputText id="email"
+                                     required="true"
+                                     requiredMessage="Please enter your email address!"
+                                     value="#{userController.newUser.profileData.email}"/>
+
+                        <h:outputLabel for="username" value="Username:"/>
+                        <p:inputText id="username"
+                                     required="true"
+                                     requiredMessage="Please enter your user name!"
+                                     value="#{userController.newUser.profileData.userName}"/>
+
+                        <h:outputLabel for="pwd1" value="Password:"/>
+                        <p:password  id="pwd1"
+                                     feedback="false"
+                                     required="true"
+                                     requiredMessage="Please enter your password!"
+                                     value="#{userController.newUser.changePin.newPin}"/>
+
+                        <h:outputLabel for="pwd2" value="Retype Password:"/>
+                        <p:password  id="pwd2"
+                                     feedback="false"
+                                     required="true"
+                                     requiredMessage="Please re-enter your password!"
+                                     value="#{userController.newUser.changePin.retryPin}"/>
+                    </h:panelGrid>
+
+                    <p:separator/>
+
+                    <h:panelGrid columns="2"
+                                 styleClass="fullWidth"
+                                 columnClasses="smallText leftAligned, smallText rightAligned">
+
+                        <p:commandButton value="Exit" update="messages"
+                                         onclick="regWzd.hide();"/>
+                        <p:commandButton value="Submit"
+                                         actionListener="#{userController.UserRegistration}"
+                                         update="messages,:userCtrl,:frmEventDetails"
+                                         oncomplete="handleRegistrationRequest(xhr, status, args)"/>
+
+                    </h:panelGrid>
+
+                </p:tab>
+
+            </p:wizard>
+
+        </h:form>
+
+    </p:dialog>
+
+    <!-- the rating dialog -->
+    <p:dialog id="ratingDialog" widgetVar="pnlRatingDialog"
+              modal="true" dynamic="true"
+              showHeader="true" header="Rate Event..."
+              resizable="false" closable="false" draggable="false"
+              showEffect="fade" hideEffect="fade">
+
+        <h:form>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         styleClass="fullWidth"
+                         columnClasses="label smallText,value smallText">
+
+                <h:outputLabel for="evt_artist" value="Artist:"/>
+                <h:outputText id="evt_artist" value="#{eventController.ratingDetail.event.artistName}"/>
+
+                <h:outputLabel for="evt_date" value="Date:"/>
+                <h:outputText id="evt_date"
+                              value="#{eventController.ratingDetail.event.eventData.startDate.toGregorianCalendar().time}">
+                    <f:convertDateTime type="both" dateStyle="short"/>
+                </h:outputText>
+
+                <h:outputLabel for="evt_location" value="Location:"/>
+                <h:outputText id="evt_location"
+                              value="#{eventController.ratingDetail.event.eventData.location.addressLine}"/>
+
+                <h:outputLabel for="evt_rating" value="Rating:"/>
+                <p:rating id="evt_rating" value="#{eventController.ratingDetail.rating}"
+                          required="true" requiredMessage="Please add your rating!"/>
+
+                <h:outputLabel for="evt_comment" value="Comment:"/>
+                <p:inputText id="evt_comment" value="#{eventController.ratingDetail.comment}"/>
+
+            </h:panelGrid>
+
+            <p:separator/>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         styleClass="fullWidth"
+                         columnClasses="smallText leftAligned,smallText rightAligned">
+
+                <p:commandButton value="submit"
+                                 update="messages,:frmUserData:tblOrders"
+                                 actionListener="#{eventController.RateEvent}"
+                                 oncomplete="handleRatingRequest(xhr, status, args)"/>
+
+                <p:commandButton value="exit"
+                                 onclick="pnlRatingDialog.hide();"/>
+
+            </h:panelGrid>
+
+        </h:form>
+
+    </p:dialog>
+
+    <!-- the change pin dialog -->
+    <p:dialog id="changePinDialog" widgetVar="pnlChangePinDialog"
+              modal="true" dynamic="true"
+              showHeader="true" header="Change your pin..."
+              resizable="false" closable="false" draggable="false"
+              showEffect="fade" hideEffect="fade">
+
+        <h:form>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         styleClass="fullWidth"
+                         columnClasses="label smallText,value smallText">
+
+                <h:outputLabel for="user_name"
+                               value="Username:"/>
+                <h:outputText  id="user_name"
+                               value="#{userController.loggedOnUser.profileData.userName}" />
+
+                <h:outputLabel  for="user_currPin"
+                                value="Current Pin:"/>
+                <p:password     id="user_currPin"
+                                feedback="false"
+                                required="true"
+                                requiredMessage="Please enter your current pin!"
+                                value="#{userController.loggedOnUser.changePin.currentPin}"/>
+
+                <h:outputLabel  for="pwd1"
+                                value="New Pin:"/>
+                <p:password     id="pwd1"
+                                label="Password 1"
+                                feedback="false"
+                                required="true"
+                                requiredMessage="Please enter your new pin!"
+                                value="#{userController.loggedOnUser.changePin.newPin}"/>
+
+                <h:outputLabel  for="pwd2"
+                                value="Retype Pin:"/>
+                <p:password     id="pwd2"
+                                label="Password 2"
+                                feedback="false"
+                                required="true"
+                                requiredMessage="Please re-type your new pin!"
+                                value="#{userController.loggedOnUser.changePin.retryPin}"/>
+            </h:panelGrid>
+
+            <p:separator/>
+
+            <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                         styleClass="fullWidth"
+                         columnClasses="smallText leftAligned,smallText rightAligned">
+
+                <p:commandButton value="submit"
+                                 update="messages"
+                                 actionListener="#{userController.ChangePin}"
+                                 oncomplete="handleChangePinRequest(xhr, status, args)"/>
+
+                <p:commandButton value="exit"
+                                 onclick="pnlChangePinDialog.hide();"/>
+
+            </h:panelGrid>
+
+        </h:form>
+
+    </p:dialog>
+
+</ui:composition>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <h:panelGrid columns="3"
+                 bodyrows="1"
+                 border="0"
+                 width="100%"
+                 columnClasses="threecolGrid,threecolGrid,threecolGrid rightFloating topAligned absolutePos">
+
+        <h:graphicImage library="images" name="logo.png" styleClass="logo"/>
+        <h:outputLabel value="Ticket Master" styleClass="headerText"/>
+
+        <h:form id="userCtrl">
+
+            <p:outputPanel id="pnlLoginStatus" autoUpdate="true">
+                <!-- currently no one is logged on -->
+                <h:panelGrid columns="2" bodyrows="1"
+                             cellspacing="10"
+                             styleClass="smallText fullWidth"
+                             columnClasses="twocolGrid rightAligned,twocolGrid rightAligned"
+                             rendered="#{userController.loggedOnUser == null}">
+
+                    <p:commandLink value="Sign On"
+                                   onclick="pnlUserLogin.show();"
+                                   styleClass="leftAligned"/>
+
+                    <p:commandLink value="Create new account"
+                                   actionListener="#{userController.PrepareUserRegistration}"
+                                   oncomplete="wzdUserRegistration.show();"
+                                   styleClass="rightAligned"/>
+                </h:panelGrid>
+                <!-- user logged on -->
+                <h:panelGrid columns="3"
+                             cellspacing="10"
+                             styleClass="smallText fullWidth"
+                             rendered="#{userController.loggedOnUser != null}"
+                             columnClasses="twocolGrid rightAligned,twocolGrid rightAligned">
+
+                    <p:outputPanel>
+
+                        <h:outputText value="Welcome #{userController.loggedOnUser.profileData.salutation}"/>
+
+                        <p:spacer width="10px"/>
+
+                        <p:commandLink
+                                value="#{userController.loggedOnUser.profileData.firstName} #{userController.loggedOnUser.profileData.lastName}"
+                                actionListener="#{userController.CheckCustomerProfile}"
+                                update="messages,:userCtrl"
+                                oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+                    </p:outputPanel>
+
+                    <p:commandLink value="Sign Out"
+                                   actionListener="#{userController.Logout}"
+                                   update="messages,:userCtrl,:frmEventDetails"
+                                   oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+                </h:panelGrid>
+            </p:outputPanel>
+        </h:form>
+    </h:panelGrid>
+
+</ui:composition>

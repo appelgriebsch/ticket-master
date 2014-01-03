@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<events>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2009/david-garrett-tickets.jpg</url>
+        <description>
+            <![CDATA[
+               David Garrett kommt 2012 mit einem ganz neuen Crossover-Programm auf Tour. Der weltweit renommierte Geiger legt neben seinem klassischen Repertoire immer wieder große Akzente auf moderne Interpretationen. Bei seinen Ausflügen in die Rock- und Popmusik schafft er stets eine einzigartige Mischung klassischer Werke mit aktuellem Repertoire und wird dafür von Publikum und Presse seit Jahren gleichermaßen gefeiert.
+            ]]>
+        </description>
+        <startdate>2011-12-01T20:00:00</startdate>
+        <enddate>2011-12-01T23:00:00</enddate>
+        <price>25.00</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>David Garrett</artist>
+        <location>
+            <address>o2 World Hamburg</address>
+            <streetname>Sylvesterallee 10</streetname>
+            <zip>22525</zip>
+            <city>Hamburg</city>
+            <country>DEU</country>
+            <district>Hamburg</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/de/156x198/2011/sting-neu-2012-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Nach dem enormen Erfolg seiner nordamerikanischen Konzertreise kommt Sting mit seiner Back To Bass Tour im Frühjahr nach Europa. Zum 25-jährigen Jubiläum seiner Solo-Karriere wird der Fokus auf den Bass zurückgeführt, alle Hits auf ihren einzigartigen Kern reduziert und so pur präsentiert, wie seit Jahren nicht mehr. Begleitet wird Sting von einer fünfköpfigen Band.
+            ]]>
+        </description>
+        <startdate>2011-12-20T20:00:00</startdate>
+        <enddate>2011-12-20T23:00:00</enddate>
+        <price>25.00</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Sting</artist>
+        <location>
+            <address>o2 World Hamburg</address>
+            <streetname>Sylvesterallee 10</streetname>
+            <zip>22525</zip>
+            <city>Hamburg</city>
+            <country>DEU</country>
+            <district>Hamburg</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2011/sascha-grammel-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Sascha Grammel (* 19. Februar 1974 in Berlin) ist ein deutscher Comedian, Puppenspieler und Bauchredner.
+            ]]>
+        </description>
+        <startdate>2011-11-11T20:00:00</startdate>
+        <enddate>2011-12-16T23:00:00</enddate>
+        <price>45.00</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Sascha Grammel</artist>
+        <location>
+            <address>Kulturhaus Spandau - Theatersaal</address>
+            <streetname>Mauerstraße 6</streetname>
+            <zip>13597</zip>
+            <city>Berlin</city>
+            <country>DEU</country>
+            <district>Berlin</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2011/sascha-grammel-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Sascha Grammel (* 19. Februar 1974 in Berlin) ist ein deutscher Comedian, Puppenspieler und Bauchredner.
+            ]]>
+        </description>
+        <startdate>2012-01-05T20:00:00</startdate>
+        <enddate>2012-12-14T23:00:00</enddate>
+        <price>35.50</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Sascha Grammel</artist>
+        <location>
+            <address>Stadthalle Neubrandenburg</address>
+            <streetname>Parkstraße 2</streetname>
+            <zip>17033</zip>
+            <city>Neubrandenburg</city>
+            <country>DEU</country>
+            <district>Neubrandenburg</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2011/andrea-berg-abenteuertour-2012-tickets.jpg
+        </url>
+        <description>
+            <![CDATA[
+                Platz eins in den Charts, Gewinn des "Echo" sowie der Goldenen Stimmgabel, das Bundesverdienstkreuz am Bande und zahlreiche umjubelte Tourneen - Andrea Berg ist die erfolgreichste Sängerin des Jahrzehnts. Allein mit der Tour zu ihrem Album "Zwischen Himmel und Erde" begeisterte die Schlagersängerin bei 30 Konzerten über 200.000 Besucher. 
+            ]]>
+        </description>
+        <startdate>2012-01-06T20:00:00</startdate>
+        <enddate>2012-03-12T23:00:00</enddate>
+        <price>28.90</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Andrea Berg</artist>
+        <location>
+            <address>Hanns-Martin-Schleyer-Halle</address>
+            <streetname>Mercedesstraße 69</streetname>
+            <zip>70327</zip>
+            <city>Stuttgart</city>
+            <country>DEU</country>
+            <district>Stuttgart</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2011/andrea-berg-abenteuertour-2012-tickets.jpg
+        </url>
+        <description>
+            <![CDATA[
+                Platz eins in den Charts, Gewinn des "Echo" sowie der Goldenen Stimmgabel, das Bundesverdienstkreuz am Bande und zahlreiche umjubelte Tourneen - Andrea Berg ist die erfolgreichste Sängerin des Jahrzehnts. Allein mit der Tour zu ihrem Album "Zwischen Himmel und Erde" begeisterte die Schlagersängerin bei 30 Konzerten über 200.000 Besucher. 
+            ]]>
+        </description>
+        <startdate>2012-01-06T20:00:00</startdate>
+        <enddate>2012-03-12T23:00:00</enddate>
+        <price>57.90</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Andrea Berg</artist>
+        <location>
+            <address>LANXESS arena</address>
+            <streetname>willy-Brandt-Platz</streetname>
+            <zip>50679</zip>
+            <city>Köln</city>
+            <country>DEU</country>
+            <district>Tickets für KÖLN</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/galery/222x222/a/die-aerzte-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Die Ärzte gehören zu den kommerziell erfolgreichsten deutschen Musikgruppen und haben bis heute 7.000.000 Tonträger verkauft. Was Farin Urlaub, Bela B. und Rodrigo González seit Jahrzehnten in die Gehörgänge ihrer Fans befördern, lässt sich schwerlich ohne Superlative beschreiben. 2012 hat das Warten ihrer unzähligen Fans ein Ende: "Die beste Band der Welt" geht auf "Das Ende ist noch nicht vorbei"-Tour! Vom 16.05. bis zum 19.08.2012 machen Farin, Bela und Rod in 18 deutschen Städten Halt, um nicht nur ihr kommendes Album, sondern auch ihr 30-jähriges Bandbestehen zu feiern. 
+            ]]>
+        </description>
+        <startdate>2012-05-16T20:00:00</startdate>
+        <enddate>2012-08-18T23:00:00</enddate>
+        <price>89.99</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Die Ärzte</artist>
+        <location>
+            <address>Stadthalle Zwickau</address>
+            <streetname>Bergmannsstraße 1</streetname>
+            <zip>08056</zip>
+            <city>Zwickau</city>
+            <country>DEU</country>
+            <district>ZWICKAU</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/galery/222x222/a/die-aerzte-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Die Ärzte gehören zu den kommerziell erfolgreichsten deutschen Musikgruppen und haben bis heute 7.000.000 Tonträger verkauft. Was Farin Urlaub, Bela B. und Rodrigo González seit Jahrzehnten in die Gehörgänge ihrer Fans befördern, lässt sich schwerlich ohne Superlative beschreiben. 2012 hat das Warten ihrer unzähligen Fans ein Ende: "Die beste Band der Welt" geht auf "Das Ende ist noch nicht vorbei"-Tour! Vom 16.05. bis zum 19.08.2012 machen Farin, Bela und Rod in 18 deutschen Städten Halt, um nicht nur ihr kommendes Album, sondern auch ihr 30-jähriges Bandbestehen zu feiern. 
+            ]]>
+        </description>
+        <startdate>2012-05-16T20:00:00</startdate>
+        <enddate>2012-08-18T23:00:00</enddate>
+        <price>89.99</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Die Ärzte</artist>
+        <location>
+            <address>Filmnächte am Elbufer</address>
+            <streetname>Königsufer</streetname>
+            <zip>01097</zip>
+            <city>Dresden</city>
+            <country>DEU</country>
+            <district>Tickets für Dresden</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/galery/222x222/p/pink-carnival-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                "Get the Party started!" schrie sie einst heraus. Und auch wenn sich P!NKs erster Welthit steten Schrittes auf den zehnten Geburtstag zubewegt, ist die Feierei noch lange nicht vorbei!
+                Auf einmalige Weise vereinbart P!NK Party mit Ballade, Sinnlichkeit mit Schärfe und Pop mit Punk. Ihre Konzerte hinterlassen seit bald einer Dekade ein enthusiastisches Publikum.
+                Registrieren Sie sich jetzt für den Ticketalarm und wir informieren Sie, sobald es Neuigkeiten gibt. 
+            ]]>
+        </description>
+        <startdate>2011-11-01T20:00:00</startdate>
+        <enddate>2012-06-17T23:00:00</enddate>
+        <price>85.70</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>P!NK</artist>
+        <location>
+            <address>Lummerland Halle</address>
+            <streetname>Lummersfeld 11</streetname>
+            <zip>12345</zip>
+            <city>Lummerland</city>
+            <country>DEU</country>
+            <district>Lummerland</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2008/max-raabe-tickets_02.jpg</url>
+        <description>
+            <![CDATA[
+                Max Raabe (* 12. Dezember 1962 in Lünen) ist ein deutscher Sänger im Stimmfach Bariton und Mitbegründer sowie Leiter des Palast Orchesters in Berlin. Erste Gesangserfahrungen sammelte Max Raabe im Kirchenkinderchor seiner Heimatgemeinde Lünen und in der Kantorei seiner Schule. 
+            ]]>
+        </description>
+        <startdate>2011-11-14T20:00:00</startdate>
+        <enddate>2012-11-26T23:00:00</enddate>
+        <price>20.50</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Max Raabe</artist>
+        <location>
+            <address>Messe+Congress Centrum Halle Münsterland</address>
+            <streetname>Albersloher Weg 32</streetname>
+            <zip>48155</zip>
+            <city>Münster</city>
+            <country>DEU</country>
+            <district>Münster</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/60x60/2011/helene-fischer-tickets-2012.jpg</url>
+        <description>
+            <![CDATA[
+                Die "Krone der Volksmusik" wird jährlich an die erfolgreichsten Schlagermusiker vergeben. Bei der Live-Fernsehshow der Auszeichnung in der Chemnitzer Stadthalle gehörte am 10. Januar die erst 25-jährige Helene Fischer zu den großen Gewinnern.
+            ]]>
+        </description>
+        <startdate>2012-09-12T20:00:00</startdate>
+        <enddate>2012-11-27T23:00:00</enddate>
+        <price>59.00</price>
+        <allocation>1000</allocation>
+        <category>Konzert</category>
+        <artist>Helene Fischer</artist>
+        <location>
+            <address>Freiheitshalle Hof</address>
+            <streetname>Kulmbacher Straße 4</streetname>
+            <zip>95030</zip>
+            <city>Hof / SAALE</city>
+            <country>DEU</country>
+            <district>Hof / SAALEl</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2011/dtm-hockenheimring-2011-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Deutsche Touren Meisterschaft
+            ]]>
+        </description>
+        <startdate>2012-04-05T08:00:00</startdate>
+        <enddate>2012-04-05T23:00:00</enddate>
+        <price>38.00</price>
+        <allocation>1000</allocation>
+        <category>Sport</category>
+        <artist>DTM ESW</artist>
+        <location>
+            <address>Lausitz Ring</address>
+            <streetname>Lausitz Ring</streetname>
+            <zip>54321</zip>
+            <city>Lausitzdorf</city>
+            <country>DEU</country>
+            <district>Lausitz</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/galery/222x222/s/koenig-der-loewen-1-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Disneys Der König der Löwen ist weit mehr als ein Musical, es ist ein Bühnenkunstwerk, ein kreatives Feuerwerk der Emotionen. Die Ausnahme-Produktion verzaubert mit atemberaubenden Masken, fantastischen Kostümen und unvergesslichen Klängen – einer Mischung aus Popmusik von Sir Elton John und original afrikanischen Rhythmen.
+            ]]>
+        </description>
+        <startdate>2011-10-05T08:00:00</startdate>
+        <enddate>2012-09-05T23:00:00</enddate>
+        <price>100.51</price>
+        <allocation>1000</allocation>
+        <category>Musical</category>
+        <artist>König der Löwen</artist>
+        <location>
+            <address>Stage Theater im Hafen Hamburg</address>
+            <streetname>Norderelbstrasse 6</streetname>
+            <zip>20457</zip>
+            <city>Hamburg</city>
+            <country>DEU</country>
+            <district>Hamburg | Hafen-City</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/galery/222x222/n/dieter-nuhr-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Während das aktuelle Album/Doppelalbum von Udo Lindenberg nach seinem MTV Unplugged-Auftritt sensibel melodisch die Fans begeistert und in die Charts stürmt, bereitet Udo Lindenberg bereits den nächsten Schachzug vor: Mit voller Power und einer noch nie dagewesenen, spektakulären Show wird er ab März 2012 die Besucher auf seiner neuen Deutschland-Tour überraschen.
+            ]]>
+        </description>
+        <startdate>2012-03-10T08:00:00</startdate>
+        <enddate>2012-03-30T23:00:00</enddate>
+        <price>41.45</price>
+        <allocation>1000</allocation>
+        <category>Pop</category>
+        <artist>Udo Lindenberg</artist>
+        <location>
+            <address>SAP ARENA</address>
+            <streetname>An der Arena 1</streetname>
+            <zip>68163</zip>
+            <city>Mannheim</city>
+            <country>DEU</country>
+            <district>Mannheim</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2008/dieter-nuhr-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Auf unnachahmliche Weise vereint Dieter Nuhr auf der Bühne Kabarett mit Comedy. Dass diese Mischung ankommt, beweisen die Zuschauermassen, die Nuhrs Auftritte verfolgen wollen. Eine halbe Million Menschen zog er alleine mit seinem Programm "Ich bin's Nuhr" in die Halle.
+            ]]>
+        </description>
+        <startdate>2011-12-05T08:00:00</startdate>
+        <enddate>2012-05-14T23:00:00</enddate>
+        <price>16.80</price>
+        <allocation>1000</allocation>
+        <category>Comedy</category>
+        <artist>Dieter Nuhr</artist>
+        <location>
+            <address>RADIALSYSTEM V.</address>
+            <streetname>Holzmarktstraße 33</streetname>
+            <zip>10243</zip>
+            <city>Berlin</city>
+            <country>DEU</country>
+            <district>Berlin</district>
+        </location>
+    </event>
+    <event>
+        <url>http://www.eventim.de/obj/media/DE-eventim/teaser/222x222/2008/dieter-nuhr-tickets.jpg</url>
+        <description>
+            <![CDATA[
+                Auf unnachahmliche Weise vereint Dieter Nuhr auf der Bühne Kabarett mit Comedy. Dass diese Mischung ankommt, beweisen die Zuschauermassen, die Nuhrs Auftritte verfolgen wollen. Eine halbe Million Menschen zog er alleine mit seinem Programm "Ich bin's Nuhr" in die Halle.
+            ]]>
+        </description>
+        <startdate>2011-12-05T08:00:00</startdate>
+        <enddate>2012-05-14T23:00:00</enddate>
+        <price>16.80</price>
+        <allocation>1000</allocation>
+        <category>Comedy</category>
+        <artist>Dieter Nuhr</artist>
+        <location>
+            <address>CongressPark Wolfsburg</address>
+            <streetname>Heinrich-Heine-Straße</streetname>
+            <zip>38440</zip>
+            <city>Wolfsburg</city>
+            <country>DEU</country>
+            <district>Wolfsburg</district>
+        </location>
+    </event>
+</events>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:panelGrid columns="3" bodyrows="1" border="0" styleClass="fullWidth"
+                 columnClasses="smallText leftAligned, smallText centerAligned, smallText rightAligned">
+        <h:outputText value="version: #{systemController.versionString}"/>
+        <h:outputText value="#{systemController.copyrightString}"/>
+        <h:outputText value="#{systemController.sysDate}">
+            <f:convertDateTime pattern="'last update: 'dd.MM.yyyy HH:mm:ss"/>
+        </h:outputText>
+    </h:panelGrid>
+
+</ui:composition>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+    <persistence-unit name="ticketmaster.dataaccess"
+                      transaction-type="RESOURCE_LOCAL">
+        <mapping-file>META-INF/orm.xml</mapping-file>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Address</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.AddressType</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Artist</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Category</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Country</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Event</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Genre</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Order</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.OrderStatus</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Rating</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.User</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.Usertype</class>
+        <class>de.fhdw.ify208.ticketmaster.dataaccess.EventStatus</class>
+        <properties>
+            <property name="javax.persistence.jdbc.user" value="ticketmaster"/>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="javax.persistence.jdbc.password" value="ify208@FHDW"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/ticketDB"/>
+        </properties>
+    </persistence-unit>
+</persistence>

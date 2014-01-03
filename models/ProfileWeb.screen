@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" x="96" y="56" width="457" height="385" text="Google Chrome&#xA;http://www.ticketmaster.com/profile" measuredWidth="457" measuredHeight="385"/>
+  <widgets xsi:type="model:Label" x="400" y="118" text="Welcome Mr. x" measuredWidth="84" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Link" x="494" y="118" text="Sign Out" measuredWidth="49" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" x="106" y="138" text="Profile" measuredWidth="104" measuredHeight="46">
+    <font size="32"/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" x="128" y="183" width="415" height="66" text="Profile Data (Name, Address)" measuredWidth="415" measuredHeight="66"/>
+  <widgets xsi:type="model:Label" x="106" y="275" text="Orders" measuredWidth="111" measuredHeight="46">
+    <font size="32"/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" x="400" y="286" width="143" text="Search" measuredWidth="143" measuredHeight="24"/>
+  <widgets xsi:type="model:Table" x="128" y="320" width="415" height="111" text="ID,=.Date v,Event,Artist,Place,(align:center). Actions&#xA;3,2011-10-01,A,B,Hal of Fame,[Rate] [Cancel]&#xA;2,2011-06-20,B,D,Hal of Fame,[Rate] &#xA;1,2010-12-01,D,F,Hal of Fame,[Rate] &#xA;" measuredWidth="415" measuredHeight="111" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Link" x="483" y="248" text="Save" measuredWidth="27" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Link" x="516" y="248" text="Exit" measuredWidth="24" measuredHeight="21">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font/>
+</model:Screen>

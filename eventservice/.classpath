@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ticketmaster.common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ticketmaster.dataaccess"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/-4.8.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JPA"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JAX-WS"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

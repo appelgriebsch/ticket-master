@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eclipse-userlibraries version="2">
+    <library name="EclipseLink" systemlibrary="false">
+        <archive path="./lib/eclipselink/jlib/eclipselink.jar"/>
+    </library>
+    <library name="JAX-WS" systemlibrary="false">
+        <archive path="./lib/jaxws/lib/activation.jar"/>
+        <archive path="./lib/jaxws/lib/FastInfoset.jar"/>
+        <archive path="./lib/jaxws/lib/gmbal-api-only.jar"/>
+        <archive path="./lib/jaxws/lib/ha-api.jar"/>
+        <archive path="./lib/jaxws/lib/http.jar"/>
+        <archive path="./lib/jaxws/lib/jaxb-api.jar"/>
+        <archive path="./lib/jaxws/lib/jaxb-impl.jar"/>
+        <archive path="./lib/jaxws/lib/jaxb-xjc.jar"/>
+        <archive path="./lib/jaxws/lib/jaxws-api.jar"/>
+        <archive path="./lib/jaxws/lib/jaxws-rt.jar"/>
+        <archive path="./lib/jaxws/lib/jaxws-tools.jar"/>
+        <archive path="./lib/jaxws/lib/jsr173_api.jar"/>
+        <archive path="./lib/jaxws/lib/jsr181-api.jar"/>
+        <archive path="./lib/jaxws/lib/jsr250-api.jar"/>
+        <archive path="./lib/jaxws/lib/management-api.jar"/>
+        <archive path="./lib/jaxws/lib/mimepull.jar"/>
+        <archive path="./lib/jaxws/lib/policy.jar"/>
+        <archive path="./lib/jaxws/lib/resolver.jar"/>
+        <archive path="./lib/jaxws/lib/saaj-api.jar"/>
+        <archive path="./lib/jaxws/lib/saaj-impl.jar"/>
+        <archive path="./lib/jaxws/lib/stax-ex.jar"/>
+        <archive path="./lib/jaxws/lib/streambuffer.jar"/>
+        <archive path="./lib/jaxws/lib/woodstox.jar"/>
+    </library>
+    <library name="JPA" systemlibrary="false">
+        <archive path="./lib/jpa/javaee.jar"/>
+        <archive path="./lib/jpa/javax.persistence.jar"/>
+    </library>
+    <library name="JSF" systemlibrary="false">
+        <archive path="./lib/jsf/javax.faces-2.1.4.jar"/>
+        <archive path="./lib/jsf/jstl-api-1.2.jar"/>
+        <archive path="./lib/jsf/jstl-impl-1.2.jar"/>
+    </library>
+    <library name="PostgreSQL JDBC Driver" systemlibrary="false">
+        <archive path="./lib/postgresql/postgresql-9.1-901.jdbc4.jar"/>
+    </library>
+    <library name="PrimeFaces" systemlibrary="false">
+        <archive path="./lib/primefaces/primefaces-3.0.M4.jar"/>
+    </library>
+</eclipse-userlibraries>

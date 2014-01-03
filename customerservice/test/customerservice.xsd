@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.5-b01 .--><xs:schema version="1.0" targetNamespace="de.fhdw.ify208.ticketmaster.common.model" xmlns:tns="de.fhdw.ify208.ticketmaster.common.model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ChangeCustomer" type="tns:ChangeCustomer"/>
+  <xs:element name="ChangeCustomerResponse" type="tns:ChangeCustomerResponse"/>
+  <xs:element name="CloseCustomerProfile" type="tns:CloseCustomerProfile"/>
+  <xs:element name="CloseCustomerProfileResponse" type="tns:CloseCustomerProfileResponse"/>
+  <xs:element name="GetAddressTypes" type="tns:GetAddressTypes"/>
+  <xs:element name="GetAddressTypesResponse" type="tns:GetAddressTypesResponse"/>
+  <xs:element name="GetCustomerAddresses" type="tns:GetCustomerAddresses"/>
+  <xs:element name="GetCustomerAddressesResponse" type="tns:GetCustomerAddressesResponse"/>
+  <xs:element name="GetCustomerTypes" type="tns:GetCustomerTypes"/>
+  <xs:element name="GetCustomerTypesResponse" type="tns:GetCustomerTypesResponse"/>
+  <xs:element name="MaintainAddress" type="tns:MaintainAddress"/>
+  <xs:element name="MaintainAddressResponse" type="tns:MaintainAddressResponse"/>
+  <xs:element name="RegisterCustomer" type="tns:RegisterCustomer"/>
+  <xs:element name="RegisterCustomerResponse" type="tns:RegisterCustomerResponse"/>
+  <xs:element name="RemoveAddress" type="tns:RemoveAddress"/>
+  <xs:element name="RemoveAddressResponse" type="tns:RemoveAddressResponse"/>
+  <xs:element name="SignOn" type="tns:SignOn"/>
+  <xs:element name="SignOnResponse" type="tns:SignOnResponse"/>
+  <xs:element name="address" type="tns:addressDTO"/>
+  <xs:element name="addresses" type="tns:addressListDTO"/>
+  <xs:element name="country" type="tns:countryDTO"/>
+  <xs:element name="customer" type="tns:customerDTO"/>
+  <xs:element name="newPassword" nillable="true" type="xs:string"/>
+  <xs:element name="oldPassword" nillable="true" type="xs:string"/>
+  <xs:element name="password" nillable="true" type="xs:string"/>
+  <xs:element name="typecode" type="tns:typeCodeDTO"/>
+  <xs:element name="typecodes" type="tns:typeCodeListDTO"/>
+  <xs:complexType name="RemoveAddress">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+      <xs:element ref="tns:address" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="customerDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="birthdate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="genderType" type="tns:genderType" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="password" type="xs:string" minOccurs="0"/>
+          <xs:element name="salutation" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="tns:customerStatus" minOccurs="0"/>
+          <xs:element name="type" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="baseDTO">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+      <xs:element name="returncode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="typeCodeDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:int" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="addressDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="addressLine" type="xs:string" minOccurs="0"/>
+          <xs:element name="addressType" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="cityName" type="xs:string" minOccurs="0"/>
+          <xs:element ref="tns:country" minOccurs="0"/>
+          <xs:element name="district" type="xs:string" minOccurs="0"/>
+          <xs:element name="streetName" type="xs:string" minOccurs="0"/>
+          <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countryDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:typeCodeDTO">
+        <xs:sequence>
+          <xs:element name="isoCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="RemoveAddressResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:baseDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CloseCustomerProfile">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CloseCustomerProfileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:baseDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MaintainAddress">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+      <xs:element ref="tns:address" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MaintainAddressResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:addressDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterCustomer">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RegisterCustomerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:customerDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerTypes">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:typeCodeListDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="typeCodeListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:typecode" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerAddresses">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerAddressesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:addressListDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:address" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetAddressTypes">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetAddressTypesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:typeCodeListDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ChangeCustomer">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ChangeCustomerResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:baseDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SignOn">
+    <xs:sequence>
+      <xs:element name="userName" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SignOnResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:customerDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="genderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="customerStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active"/>
+      <xs:enumeration value="Inactive"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

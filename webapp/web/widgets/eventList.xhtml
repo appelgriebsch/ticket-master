@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:form id="frmEventList">
+
+        <p:panel styleClass="noborder">
+
+            <!-- the toolbar for the list allowing to search for items -->
+            <p:toolbar>
+                <p:toolbarGroup align="left">
+                    <h:outputText value="Current Events"/>
+                </p:toolbarGroup>
+                <p:toolbarGroup align="right"
+                                styleClass="smallText rightAligned spacing10px">
+
+                    <p:selectOneMenu value="#{eventController.searchRequest.searchOption}"
+                                     styleClass="smallText spacing10px">
+                        <f:selectItems value="#{eventController.searchRequest.searchOptions}"/>
+                        <p:ajax update=":frmEventList:pnlSearchOptions"/>
+                    </p:selectOneMenu>
+
+                    <p:separator/>
+
+                    <p:outputPanel id="pnlSearchOptions">
+
+                        <p:calendar value="#{eventController.searchRequest.dateValue}"
+                                    rendered="#{eventController.searchRequest.dateOption}"
+                                    showButtonPanel="true" showWeek="true"
+                                    styleClass="smallText"/>
+
+                        <p:autoComplete value="#{eventController.searchRequest.value}"
+                                        styleClass="smallText"
+                                        forceSelection="true"
+                                        completeMethod="#{eventController.findValues}"
+                                        rendered="#{!eventController.searchRequest.dateOption}"/>
+                    </p:outputPanel>
+
+                    <p:separator/>
+
+                    <p:commandButton actionListener="#{eventController.Search}"
+                                     image="search-icon"
+                                     update="messages,:frmEventList:eventList,:frmEventDetails"/>
+
+                </p:toolbarGroup>
+            </p:toolbar>
+
+            <p:panel id="eventList" styleClass="noborder">
+
+                <!-- if events are available, just show them by 5 items per page -->
+                <p:dataGrid columns="5"
+                            rows="5"
+                            value="#{eventController.searchResult.results}"
+                            var="event"
+                            effect="true"
+                            paginator="true"
+                            paginatorPosition="bottom"
+                            paginatorAlwaysVisible="false"
+                            pageLinks="5"
+                            paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink}"
+                            rendered="#{eventController.searchResult.length != 0}">
+
+                    <p:column>
+
+                        <h:panelGrid columns="1"
+                                     columnClasses="centerAligned eventListItem"
+                                     rowClasses="fullWidth, fullWidth, fullWidth, fullWidth">
+
+                            <h:graphicImage value="#{event.eventData.adUrl}" styleClass="adSmall"/>
+
+                            <h:outputText value="#{event.artistName}" styleClass="smallText label"/>
+                            <h:outputText value="#{event.eventData.location.addressLine}" styleClass="smallText label"/>
+
+                            <h:outputText value="#{event.eventData.startDate.toGregorianCalendar().time}"
+                                          styleClass="smallText label">
+                                <f:convertDateTime type="both" dateStyle="short"/>
+                            </h:outputText>
+
+                            <h:panelGroup styleClass="fullWidth centerAligned">
+
+                                <h:graphicImage value="resources/images/search-icon.png"
+                                                styleClass="icon"/>
+                                <p:spacer styleClass="spacing10px"/>
+                                <p:commandLink value="Details anzeigen"
+                                               styleClass="smallText"
+                                               update=":frmEventDetails">
+                                    <f:setPropertyActionListener value="#{event}"
+                                                                 target="#{eventController.selectedEvent}"/>
+                                </p:commandLink>
+
+                            </h:panelGroup>
+
+                        </h:panelGrid>
+
+                    </p:column>
+                </p:dataGrid>
+
+                <!-- if no events are available, just mentioned it to the customer -->
+                <h:outputText value="No events found matching your search request!"
+                              styleClass="fullWidth fullHeight centerAligned"
+                              rendered="#{eventController.searchResult.length == 0}"/>
+
+            </p:panel>
+
+        </p:panel>
+
+    </h:form>
+
+</ui:composition>

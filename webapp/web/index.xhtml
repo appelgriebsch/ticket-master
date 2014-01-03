@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <h:outputStylesheet library="css" name="vt.css"/>
+    <h:outputScript library="scripts" name="requestHandling.js"/>
+</h:head>
+<h:body>
+
+    <p:layout fullPage="true">
+
+        <!-- the header content -->
+        <p:layoutUnit position="north" closable="false" resizable="false" styleClass="noborder">
+            <ui:include src="widgets/header.xhtml"/>
+        </p:layoutUnit>
+
+        <!-- the footer content -->
+        <p:layoutUnit position="south" closable="false" resizable="false" styleClass="noborder">
+            <ui:include src="widgets/eventList.xhtml"/>
+            <p:separator/>
+            <ui:include src="widgets/footer.xhtml"/>
+        </p:layoutUnit>
+
+        <!-- the main content area -->
+        <p:layoutUnit position="center" closable="false" resizable="false" styleClass="noborder">
+            <ui:include src="widgets/eventDetails.xhtml"/>
+        </p:layoutUnit>
+
+        <ui:include src="widgets/dialogs.xhtml"/>
+        <p:growl id="messages" life="3000" showSummary="true" showDetail="true"/>
+
+    </p:layout>
+
+</h:body>
+
+</html>

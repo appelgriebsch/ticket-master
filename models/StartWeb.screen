@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="2" x="72" y="32" width="457" height="329" text="Google Chrome&#xA;http://www.ticketmaster.com" measuredWidth="457" measuredHeight="329"/>
+  <widgets xsi:type="model:Link" id="3" x="432" y="84" text="Login" measuredWidth="33" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="4" x="474" y="84" text="Register" measuredWidth="47" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="5" x="82" y="280" width="437" height="74" measuredWidth="437" measuredHeight="74"/>
+  <widgets xsi:type="model:Label" id="6" x="152" y="288" text="Event A" measuredWidth="43" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="232" y="288" text="Event B" measuredWidth="42" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="8" x="304" y="288" text="Event C" measuredWidth="43" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="9" x="358" y="288" text="Event D" measuredWidth="44" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="109" y="216" text="Event B" measuredWidth="44" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="11" x="194" y="112" width="207" height="137" measuredWidth="207" measuredHeight="137" dummyText="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:SearchField" id="12" x="416" y="248" width="103" text="Search" measuredWidth="103" measuredHeight="24"/>
+  <widgets xsi:type="model:Link" id="13" x="453" y="204" text="Buy Tickets" measuredWidth="64" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Placeholder" id="14" x="82" y="104" width="103" height="113" text="Image / Ad" measuredWidth="103" measuredHeight="113"/>
+  <widgets xsi:type="model:Label" id="15" x="413" y="288" text="Event E" measuredWidth="42" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="16" x="92" y="288" text="Event Z" measuredWidth="42" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="17" x="216" y="280" height="74" measuredWidth="6" measuredHeight="74"/>
+  <widgets xsi:type="model:VLine" id="18" x="284" y="280" height="74" measuredWidth="6" measuredHeight="74"/>
+  <widgets xsi:type="model:Label" id="19" x="464" y="288" text="Event F" measuredWidth="42" measuredHeight="56" textAlignment="Center" icon="image (large)" iconPosition="top">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Circle" id="20" x="435" y="181" width="24" height="24" measuredWidth="24" measuredHeight="24" background="#ea9999" foreground="#ea9999">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Circle" id="21" x="464" y="181" width="24" height="24" measuredWidth="24" measuredHeight="24" background="#ffe599" foreground="#ffe599">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Circle" id="22" x="492" y="181" width="24" height="24" measuredWidth="24" measuredHeight="24" background="#00ff00" foreground="#00ff00">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="23" x="424" y="149" text="5/20 users rating" measuredWidth="99" measuredHeight="21">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="1" x="424" y="128" measuredWidth="92" measuredHeight="16">
+    <screen xsi:type="model:WidgetGroup" href="assets/Stars.screen#Stars 3 of 5"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font/>
+</model:Screen>

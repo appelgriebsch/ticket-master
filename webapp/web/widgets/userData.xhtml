@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:form id="frmUserData" styleClass="noborder">
+
+        <h:panelGrid columns="1" bodyrows="2"
+                     cellspacing="10"
+                     styleClass="fullWidth fullHeight"
+                     columnClasses="fullWidth"
+                     rowClasses="fullHeight fullWidth,fullHeight fullWidth">
+
+            <p:fieldset toggleable="false"
+                        legend="User Profile">
+
+                <h:panelGrid id="pnlUserData"
+                             columns="3"
+                             cellspacing="10"
+                             styleClass="fullWidth"
+                             columnClasses="threecolGrid,threecolGrid,threecolGrid"
+                             rendered="#{userController.loggedOnUser != null}">
+
+                    <p:outputPanel>
+                        <!-- user data -->
+                        <h:panelGrid columns="2"
+                                     cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="salutation" value="Salutation:"/>
+                            <h:outputText id="salutation"
+                                          value="#{userController.loggedOnUser.profileData.salutation}"/>
+
+                            <h:outputLabel for="firstname" value="FirstName:"/>
+                            <h:outputText id="firstname"
+                                          label="firstname"
+                                          value="#{userController.loggedOnUser.profileData.firstName}"/>
+
+                            <h:outputLabel for="lastname" value="LastName:"/>
+                            <h:outputText id="lastname"
+                                          label="lastname"
+                                          value="#{userController.loggedOnUser.profileData.lastName}"/>
+
+                            <h:outputLabel for="gendertype" value="Gender:"/>
+                            <h:outputText id="gendertype"
+                                          value="#{userController.loggedOnUser.profileData.genderType}"/>
+
+                            <h:outputLabel for="birthdate" value="Birthdate:"/>
+                            <h:outputText id="birthdate"
+                                          value="#{userController.loggedOnUser.profileData.birthdate.toGregorianCalendar().time}">
+                                <f:convertDateTime type="date" dateStyle="full"/>
+                            </h:outputText>
+
+                            <h:outputLabel for="email" value="email:"/>
+                            <h:outputText id="email"
+                                          value="#{userController.loggedOnUser.profileData.email}"/>
+
+                            <h:outputLabel for="password" value="password:"/>
+                            <p:commandLink id="password"
+                                           value="change my password"
+                                           onclick="pnlChangePinDialog.show();"/>
+
+                        </h:panelGrid>
+                    </p:outputPanel>
+
+                    <p:panel closable="false" toggleable="false" header="Shipping Address">
+                        <!-- shipping address -->
+                        <h:panelGrid columns="2"
+                                     cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="ship_addressline" value="Address Line:"/>
+                            <p:inputText id="ship_addressline"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping address!"
+                                         value="#{userController.loggedOnUser.shippingAddress.addressLine}"/>
+
+                            <h:outputLabel for="ship_streetname" value="Street Name:"/>
+                            <p:inputText id="ship_streetname"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping street name!"
+                                         value="#{userController.loggedOnUser.shippingAddress.streetName}"/>
+
+                            <h:outputLabel for="ship_cityname" value="City Name:"/>
+                            <p:inputText id="ship_cityname"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping city name!"
+                                         value="#{userController.loggedOnUser.shippingAddress.cityName}"/>
+
+                            <h:outputLabel for="ship_zipcode" value="Zip Code:"/>
+                            <p:inputText id="ship_zipcode"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping zip code!"
+                                         value="#{userController.loggedOnUser.shippingAddress.zipCode}"/>
+
+                            <h:outputLabel for="ship_district" value="District Code:"/>
+                            <p:inputText id="ship_district"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping district code!"
+                                         value="#{userController.loggedOnUser.shippingAddress.district}"/>
+
+                            <h:outputLabel for="ship_country" value="Country:"/>
+                            <h:outputText id="ship_country"
+                                          value="#{userController.loggedOnUser.shippingAddress.country.name}"/>
+
+                        </h:panelGrid>
+
+                    </p:panel>
+
+                    <p:panel closable="false" toggleable="false" header="Billing Address">
+                        <!-- billing address -->
+                        <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="bill_addressline" value="Address Line:"/>
+                            <p:inputText id="bill_addressline"
+                                         required="true"
+                                         requiredMessage="Please enter your billing address!"
+                                         disabled="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}"
+                                         value="#{userController.loggedOnUser.billingAddress.addressLine}"/>
+
+                            <h:outputLabel for="bill_streetname" value="Street Name:"/>
+                            <p:inputText id="bill_streetname"
+                                         required="true"
+                                         requiredMessage="Please enter your billing street name!"
+                                         disabled="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}"
+                                         value="#{userController.loggedOnUser.billingAddress.streetName}"/>
+
+                            <h:outputLabel for="bill_cityname" value="City Name:"/>
+                            <p:inputText id="bill_cityname"
+                                         required="true"
+                                         requiredMessage="Please enter your billing city name!"
+                                         disabled="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}"
+                                         value="#{userController.loggedOnUser.billingAddress.cityName}"/>
+
+                            <h:outputLabel for="bill_zipcode" value="Zip Code:"/>
+                            <p:inputText id="bill_zipcode"
+                                         required="true"
+                                         requiredMessage="Please enter your billing zip code!"
+                                         disabled="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}"
+                                         value="#{userController.loggedOnUser.billingAddress.zipCode}"/>
+
+                            <h:outputLabel for="bill_district" value="District Code:"/>
+                            <p:inputText id="bill_district"
+                                         required="true"
+                                         requiredMessage="Please enter your shipping district code!"
+                                         disabled="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}"
+                                         value="#{userController.loggedOnUser.billingAddress.district}"/>
+
+                            <h:outputLabel for="bill_country" value="Country:"/>
+                            <h:outputText id="bill_country"
+                                          value="#{userController.loggedOnUser.billingAddress.country.name}"/>
+
+                        </h:panelGrid>
+
+                    </p:panel>
+
+                    <h:outputText/>
+                    <p:outputPanel>
+                        <!-- shipping / billing address settings -->
+                        <h:panelGrid columns="2"
+                                     cellspacing="10"
+                                     styleClass="smallText fullWidth"
+                                     columnClasses="label,value">
+
+                            <h:outputText value="Billing Address equals Shipping Address"/>
+
+                            <p:selectBooleanCheckbox value="#{userController.loggedOnUser.billingAddressEqualsShippingAddress}">
+                                <p:ajax update=":frmUserData:pnlUserData"/>
+                            </p:selectBooleanCheckbox>
+
+                        </h:panelGrid>
+                    </p:outputPanel>
+                    <p:outputPanel>
+                        <!-- action menu list -->
+                        <h:panelGrid columns="2"
+                                     cellspacing="10"
+                                     styleClass="smallText rightFloating">
+
+                            <p:commandLink value="Save"
+                                           actionListener="#{userController.UpdateProfile}"
+                                           update="messages,:frmUserData:pnlUserData"
+                                           oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+                            <p:commandLink value="Cancel"
+                                           actionListener="#{userController.CancelUpdateProfile}"
+                                           update="messages,:frmUserData:pnlUserData"
+                                           oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+                        </h:panelGrid>
+                    </p:outputPanel>
+
+                </h:panelGrid>
+
+            </p:fieldset>
+
+            <!-- order history -->
+            <p:fieldset toggleable="false"
+                        legend="Order History">
+
+                <p:dataTable id="tblOrders"
+                             var="order"
+                             value="#{orderController.getCustomerOrders(userController.loggedOnUser.profileData)}"
+                             rendered="#{userController.loggedOnUser != null}">
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Order No.
+                        </f:facet>
+                        <h:outputText value="#{order.orderData.id}"/>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Order Date
+                        </f:facet>
+                        <h:outputText value="#{order.orderData.orderDate.toGregorianCalendar().time}">
+                            <f:convertDateTime type="both" dateStyle="short"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Order Status
+                        </f:facet>
+                        <h:outputText value="#{order.orderData.orderStatus.name}"/>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Event Date
+                        </f:facet>
+                        <h:outputText value="#{order.eventDetail.eventData.startDate.toGregorianCalendar().time}">
+                            <f:convertDateTime type="both" dateStyle="short"/>
+                        </h:outputText>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Artist
+                        </f:facet>
+                        <h:outputText value="#{order.eventDetail.artistName}"/>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth">
+                        <f:facet name="header">
+                            Location
+                        </f:facet>
+                        <h:outputText value="#{order.eventDetail.eventData.location.addressLine}"/>
+                    </p:column>
+
+                    <p:column styleClass="smallText fullWidth fullHeight">
+                        <h:panelGrid columns="2"
+                                     styleClass="fullWidth"
+                                     columnClasses="noborder orderActions,noborder orderActions">
+
+                            <p:commandLink value="Cancel Order"
+                                           actionListener="#{orderController.CancelOrder(order)}"
+                                           rendered="#{order.voidable}"
+                                           update="messages,:frmUserData:tblOrders"/>
+
+                            <p:commandLink value="Rate Event"
+                                           disabled="#{!order.ratingAllowed}"
+                                           actionListener="#{eventController.PrepareRateEvent(userController.loggedOnUser, order.eventDetail)}"
+                                           oncomplete="pnlRatingDialog.show();"
+                                           rendered="#{!order.alreadyRated}"/>
+
+                            <h:outputLabel for="pRating"
+                                           value="Rating:"
+                                           rendered="#{order.alreadyRated}"
+                                           styleClass="label"/>
+
+                            <p:rating id="pRating"
+                                      rendered="#{order.alreadyRated}"
+                                      value="#{order.eventRating.rating}"
+                                      disabled="true"/>
+
+                            <h:outputLabel for="pComment"
+                                           value="Comment:"
+                                           rendered="#{order.alreadyRated}"
+                                           styleClass="label"/>
+                            <h:outputText  id="pComment"
+                                           rendered="#{order.alreadyRated}"
+                                           value="#{order.eventRating.comment}"/>
+                        </h:panelGrid>
+                    </p:column>
+
+                </p:dataTable>
+
+            </p:fieldset>
+
+            <!-- action menu list -->
+            <h:panelGrid columns="1"
+                         cellspacing="10"
+                         columnClasses="rightAligned"
+                         styleClass="smallText rightFloating">
+
+                <p:commandLink value="Back to main page"
+                               actionListener="#{userController.CancelUpdateProfile}"
+                               update="messages,:frmUserData:pnlUserData"
+                               oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+            </h:panelGrid>
+
+        </h:panelGrid>
+
+    </h:form>
+
+</ui:composition>

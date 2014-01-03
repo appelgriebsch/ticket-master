@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:form id="frmEventDetails">
+
+        <p:panel styleClass="noborder">
+
+            <p:fieldset toggleable="false"
+                        legend="#{eventController.selectedEvent.artistName}"
+                        rendered="#{eventController.selectedEvent != null}">
+
+                <h:panelGrid columns="3"
+                             cellspacing="10"
+                             width="100%"
+                             rowClasses="fullWidth"
+                             columnClasses="eventDetailLogo, eventDetailText, eventDetailActions">
+
+                    <h:graphicImage value="#{eventController.selectedEvent.eventData.adUrl}" styleClass="adLarge"/>
+
+                    <h:panelGrid columns="1"
+                                 styleClass="fullWidth">
+
+                        <h:outputText value="#{eventController.selectedEvent.eventData.description}"
+                                      styleClass="wrapText"/>
+
+                        <h:panelGrid columns="4"
+                                     columnClasses="label,value,label,value"
+                                     styleClass="smallText fullWidth">
+
+                            <h:outputLabel value="Artist:"
+                                           for="lblArtist"/>
+                            <h:outputText id="lblArtist"
+                                          value="#{eventController.selectedEvent.artistName}"/>
+
+                            <h:outputLabel for="lblLocation"
+                                           value="Location:"/>
+                            <h:outputText id="lblLocation"
+                                          value="#{eventController.selectedEvent.eventData.location.addressLine}"/>
+
+                        </h:panelGrid>
+
+                    </h:panelGrid>
+
+                    <h:panelGrid columns="1"
+                                 columnClasses="smallText"
+                                 cellspacing="10"
+                                 rowClasses="rightFloating middleAligned,fullWidth,fullWidth rightAligned,fullWidth,fullWidth rightAligned">
+
+                        <p:outputPanel autoUpdate="true">
+                            <p:rating value="#{eventController.selectedEvent.eventData.avrgRating}"
+                                      disabled="true" widgetVar="ratingCtrl"/>
+                            <p:spacer width="10px"/>
+                            <p:commandLink  value="⬇"
+                                            disabled="#{!eventController.selectedEvent.hasRatings()}"
+                                            rendered="#{!eventController.ratingDetailViewEnabled}">
+                                <f:setPropertyActionListener value="#{true}"
+                                                             target="#{eventController.ratingDetailViewEnabled}" />
+                            </p:commandLink>
+                            <p:commandLink  value="⬆"
+                                            disabled="#{!eventController.selectedEvent.hasRatings()}"
+                                            rendered="#{eventController.ratingDetailViewEnabled}">
+                                <f:setPropertyActionListener value="#{false}"
+                                                             target="#{eventController.ratingDetailViewEnabled}" />
+                            </p:commandLink>
+                        </p:outputPanel>
+
+                        <p:outputPanel autoUpdate="true">
+
+                            <p:dataGrid columns="1"
+                                        rows="1"
+                                        value="#{eventController.selectedEvent.eventData.ratings.rating}"
+                                        var="rating"
+                                        effect="true"
+                                        paginator="true"
+                                        paginatorPosition="bottom"
+                                        paginatorAlwaysVisible="false"
+                                        pageLinks="5"
+                                        paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink}"
+                                        styleClass="ui-dialog ui-widget ui-widget-content ui-corner-all"
+                                        rendered="#{eventController.ratingDetailViewEnabled}">
+
+                                <p:column>
+
+                                    <h:panelGrid columns="2"
+                                                 columnClasses="label,value"
+                                                 styleClass="ui-dialog-content ui-widget-content fullWidth smallText">
+
+                                        <h:outputLabel value="User:"/>
+                                        <h:outputText value="#{rating.userName}"/>
+
+                                        <h:outputLabel value="Date:"/>
+                                        <h:outputText value="#{rating.timestamp.toGregorianCalendar().time}">
+                                            <f:convertDateTime type="both" dateStyle="short"/>
+                                        </h:outputText>
+
+                                        <h:outputLabel value="Rate:"/>
+                                        <p:rating value="#{rating.rating}" disabled="true"/>
+
+                                        <h:outputLabel value="Comment:"/>
+                                        <h:outputText value="#{rating.comment}"/>
+
+                                    </h:panelGrid>
+
+                                </p:column>
+
+                            </p:dataGrid>
+                        </p:outputPanel>
+                        <h:graphicImage library="images" name="traffic_red.png"
+                                        styleClass="traffic-light"
+                                        rendered="#{eventController.selectedEvent.eventAvailability.red}"/>
+
+                        <h:graphicImage library="images" name="traffic_yellow.png"
+                                        styleClass="traffic-light"
+                                        rendered="#{eventController.selectedEvent.eventAvailability.yellow}"/>
+
+                        <h:graphicImage library="images" name="traffic_green.png"
+                                        styleClass="traffic-light"
+                                        rendered="#{eventController.selectedEvent.eventAvailability.green}"/>
+
+                        <h:outputText/>
+
+                        <h:outputText value="Please login to checkout!"
+                                      rendered="#{userController.loggedOnUser == null}"
+                                      styleClass="italicText"/>
+
+                        <p:commandLink value="checkout"
+                                       actionListener="#{orderController.PrepareNewOrder(userController.loggedOnUser,
+                                                         eventController.selectedEvent)}"
+                                       update="messages,:userCtrl"
+                                       oncomplete="handlePageNavigationRequest(xhr, status, args)"
+                                       rendered="#{userController.loggedOnUser != null}"/>
+
+                    </h:panelGrid>
+
+                </h:panelGrid>
+
+            </p:fieldset>
+
+        </p:panel>
+
+    </h:form>
+
+</ui:composition>

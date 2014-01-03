@@ -1,0 +1,8 @@
+#This file contains JPA Diagram Editor settings
+#Sat Oct 15 15:17:07 CEST 2011
+defaultTableNamePrefix=T_
+directEditAffectsClass=true
+accessType=property
+diagramFolder=datamodel
+collectionType=list
+defaultPackage=de.fhdw.ify208.ticketmaster.dataaccess

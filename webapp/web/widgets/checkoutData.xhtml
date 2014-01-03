@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Author: appelgriebsch
+-->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <h:form id="frmCheckoutData" styleClass="noborder">
+
+        <h:panelGrid columns="1" bodyrows="2"
+                     cellspacing="10"
+                     styleClass="fullWidth fullHeight"
+                     columnClasses="fullWidth"
+                     rowClasses="fullHeight fullWidth,fullHeight fullWidth">
+
+            <p:fieldset toggleable="false"
+                        legend="Personal Data">
+
+                <h:panelGrid columns="3"
+                             bodyrows="1"
+                             cellspacing="10"
+                             styleClass="fullWidth"
+                             columnClasses="threecolGrid,threecolGrid,threecolGrid"
+                             rowClasses="fullHeight fullWidth,fullHeight fullWidth"
+                             rendered="#{orderController.currentOrder != null}">
+
+                    <p:outputPanel>
+                        <!-- personal data -->
+                        <h:panelGrid columns="2"
+                                     cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="salutation" value="Salutation:"/>
+                            <h:outputText id="salutation"
+                                          value="#{orderController.currentOrder.customerProfile.profileData.salutation}"/>
+
+                            <h:outputLabel for="firstname" value="First Name:"/>
+                            <h:outputText id="firstname"
+                                          value="#{orderController.currentOrder.customerProfile.profileData.firstName}"/>
+
+
+                            <h:outputLabel for="lastname" value="Last Name:"/>
+                            <h:outputText id="lastname"
+                                          value="#{orderController.currentOrder.customerProfile.profileData.lastName}"/>
+
+                            <h:outputLabel for="email" value="email:"/>
+                            <h:outputText id="email"
+                                          value="#{orderController.currentOrder.customerProfile.profileData.email}"/>
+                        </h:panelGrid>
+                    </p:outputPanel>
+
+                    <p:panel closable="false" toggleable="false" header="Shipping Address">
+                        <!-- shipping address -->
+                        <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="ship_addressline" value="Address:"/>
+                            <h:outputText id="ship_addressline"
+                                          value="#{orderController.currentOrder.orderData.shippingAddress.addressLine}"/>
+
+                            <h:outputLabel for="ship_streetname" value="Street Name:"/>
+                            <h:outputText id="ship_streetname"
+                                          value="#{orderController.currentOrder.orderData.shippingAddress.streetName}"/>
+
+                            <h:outputLabel for="ship_cityname" value="City Name:"/>
+                            <h:outputText id="ship_cityname"
+                                          value="#{orderController.currentOrder.orderData.shippingAddress.cityName}"/>
+
+                            <h:outputLabel for="ship_zipcode" value="Zip:"/>
+                            <h:outputText id="ship_zipcode"
+                                          value="#{orderController.currentOrder.orderData.shippingAddress.zipCode}"/>
+
+                            <h:outputLabel for="ship_country" value="Country:"/>
+                            <h:outputText id="ship_country"
+                                          value="#{orderController.currentOrder.orderData.shippingAddress.country.name}"/>
+
+                        </h:panelGrid>
+                    </p:panel>
+
+                    <p:panel closable="false" toggleable="false" header="Billing Address">
+                        <!-- billing address -->
+                        <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="bill_addressline" value="Address:"/>
+                            <h:outputText id="bill_addressline"
+                                          value="#{orderController.currentOrder.orderData.billingAddress.addressLine}"/>
+
+                            <h:outputLabel for="bill_streetname" value="Street Name:"/>
+                            <h:outputText id="bill_streetname"
+                                          value="#{orderController.currentOrder.orderData.billingAddress.streetName}"/>
+
+                            <h:outputLabel for="bill_cityname" value="City Name:"/>
+                            <h:outputText id="bill_cityname"
+                                          value="#{orderController.currentOrder.orderData.billingAddress.cityName}"/>
+
+                            <h:outputLabel for="bill_zipcode" value="Zip:"/>
+                            <h:outputText id="bill_zipcode"
+                                          value="#{orderController.currentOrder.orderData.billingAddress.zipCode}"/>
+
+                            <h:outputLabel for="bill_country" value="Country:"/>
+                            <h:outputText id="bill_country"
+                                          value="#{orderController.currentOrder.orderData.billingAddress.country.name}"/>
+
+                        </h:panelGrid>
+                    </p:panel>
+
+                    <h:outputText/>
+                    <h:outputText/>
+                    <p:outputPanel>
+                        <!-- action menu list -->
+                        <h:panelGrid columns="2"
+                                     cellspacing="10"
+                                     styleClass="fullWidth rightAligned smallText">
+
+                            <h:outputText/>
+
+                            <p:commandLink value="Change Addresses"
+                                           actionListener="#{userController.CheckCustomerProfile}"
+                                           update="messages,:frmUserData:pnlUserData"
+                                           oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+                        </h:panelGrid>
+                    </p:outputPanel>
+                </h:panelGrid>
+
+            </p:fieldset>
+
+            <p:fieldset toggleable="false"
+                        legend="Event Data">
+
+                <h:panelGrid columns="3"
+                             bodyrows="1"
+                             cellspacing="10"
+                             styleClass="fullWidth"
+                             columnClasses="eventDetailLogo, checkoutDetailText, threecolGrid rightAligned"
+                             rowClasses="fullHeight"
+                             rendered="#{orderController.currentOrder != null}">
+
+                    <p:outputPanel>
+
+                        <!-- event image -->
+                        <h:panelGrid columns="1"
+                                     columnClasses="fullWidth centerAligned">
+
+                            <h:graphicImage value="#{orderController.currentOrder.eventDetail.eventData.adUrl}"
+                                            styleClass="adLarge"/>
+
+                        </h:panelGrid>
+
+                    </p:outputPanel>
+
+                    <p:outputPanel>
+
+                        <!-- event description, location, artist -->
+                        <h:panelGrid columns="1"
+                                     styleClass="fullWidth"
+                                     rowClasses="fullWidth,fullWidth,fullWidth">
+
+                            <h:panelGrid columns="2"
+                                         styleClass="fullWidth"
+                                         columnClasses="label twocolGrid,value twocolGrid">
+
+                                <h:outputLabel value="Artist:"
+                                               for="lblArtist"/>
+                                <h:outputText id="lblArtist"
+                                              value="#{eventController.selectedEvent.artistName}"/>
+
+                            </h:panelGrid>
+
+                            <h:outputText value="#{eventController.selectedEvent.eventData.description}"
+                                          styleClass="wrapText smallText fullWidth"/>
+
+                            <h:panelGrid columns="2"
+                                         columnClasses="label twocolGrid,value twocolGrid"
+                                         styleClass="smallText fullWidth">
+
+                                <h:outputLabel for="lblLocation"
+                                               value="Location:"/>
+                                <h:outputText id="lblLocation"
+                                              value="#{eventController.selectedEvent.eventData.location.addressLine}"/>
+
+                            </h:panelGrid>
+
+                        </h:panelGrid>
+
+                    </p:outputPanel>
+
+                    <p:outputPanel>
+
+                        <!-- event start date, end date, avrg rating, availability pricing -->
+                        <h:panelGrid columns="2" cellpadding="10" cellspacing="2"
+                                     columnClasses="label, value"
+                                     styleClass="fullWidth smallText">
+
+                            <h:outputLabel for="evt_start" value="Start Date:"/>
+                            <h:outputText id="evt_start"
+                                          value="#{orderController.currentOrder.eventDetail.eventData.startDate.toGregorianCalendar().time}">
+                                <f:convertDateTime type="both" dateStyle="short"/>
+                            </h:outputText>
+
+                            <h:outputLabel for="evt_end" value="End Date:"/>
+                            <h:outputText id="evt_end"
+                                          value="#{orderController.currentOrder.eventDetail.eventData.endDate.toGregorianCalendar().time}">
+                                <f:convertDateTime type="both" dateStyle="short"/>
+                            </h:outputText>
+
+                            <h:outputLabel for="evt_avail" value="Tickets available:"/>
+                            <h:outputText id="evt_avail"
+                                          value="#{orderController.currentOrder.eventDetail.eventData.availableTickets}"/>
+
+                            <h:outputLabel for="evt_price" value="Ticket price:"/>
+                            <h:outputText id="evt_price"
+                                          value="#{orderController.currentOrder.eventDetail.eventData.ticketPrice}"/>
+
+                        </h:panelGrid>
+
+                    </p:outputPanel>
+
+                </h:panelGrid>
+
+            </p:fieldset>
+
+            <p:fieldset toggleable="false"
+                        legend="Order Data">
+
+                <h:panelGrid id="pnlOrderData"
+                             columns="2"
+                             cellspacing="10"
+                             styleClass="fullWidth">
+
+                    <p:outputPanel>
+
+                        <h:panelGrid columns="2"
+                                     cellspacing="10"
+                                     columnClasses="label,value">
+
+                            <h:outputLabel for="no_tickets" value="No. of tickets:"/>
+                            <p:spinner id="no_tickets" min="1"
+                                       max="#{orderController.currentOrder.eventDetail.eventData.availableTickets}"
+                                       value="#{orderController.currentOrder.orderData.orderQuantity}"
+                                       required="true"
+                                       requiredMessage="Please select no. of tickets to order!">
+                                <p:ajax update="messages,:frmCheckoutData:pnlOrderData"/>
+                            </p:spinner>
+
+                            <h:outputLabel for="price" value="Total Amount:"/>
+                            <h:outputText id="price"
+                                          value="#{orderController.currentOrder.orderData.orderQuantity} * $ #{orderController.currentOrder.eventDetail.eventData.ticketPrice}"/>
+
+                            <h:outputText/>
+                            <h:outputText
+                                    value="= $ #{orderController.currentOrder.orderData.orderQuantity * orderController.currentOrder.eventDetail.eventData.ticketPrice}"
+                                    styleClass="label"/>
+
+                        </h:panelGrid>
+
+                    </p:outputPanel>
+
+                    <p:outputPanel>
+
+                        <h:panelGrid columns="2"
+                                     columnClasses="label topAligned,value"
+                                     cellspacing="10"
+                                     styleClass="fullWidth">
+
+                            <h:outputLabel for="pay_method" value="Payment Method:"/>
+                            <p:selectOneRadio id="pay_method" layout="pageDirection" value="1">
+                                <f:selectItem itemLabel="Paypal" itemValue="1"/>
+                                <f:selectItem itemLabel="VISA card" itemValue="2"/>
+                                <f:selectItem itemLabel="American Express card" itemValue="3"/>
+                                <f:selectItem itemLabel="Master card" itemValue="4"/>
+                            </p:selectOneRadio>
+
+                        </h:panelGrid>
+
+                    </p:outputPanel>
+
+                </h:panelGrid>
+
+            </p:fieldset>
+
+            <!-- action menu list -->
+            <h:panelGrid columns="2"
+                         cellspacing="10"
+                         columnClasses="rightAligned,rightAligned"
+                         styleClass="smallText rightFloating">
+
+                <p:commandLink value="Submit Order"
+                               actionListener="#{orderController.BookEvent}"
+                               update="messages"
+                               oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+                <p:commandLink value="Cancel Order"
+                               actionListener="#{orderController.CancelBooking}"
+                               update="messages"
+                               oncomplete="handlePageNavigationRequest(xhr, status, args)"/>
+
+            </h:panelGrid>
+
+        </h:panelGrid>
+
+    </h:form>
+
+</ui:composition>

@@ -1,0 +1,197 @@
+.headerText {
+
+    text-align: center;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.logo {
+
+    vertical-align: middle;
+    width: 5pc;
+    height: 5pc;
+    float: left;
+}
+
+.topAligned {
+
+    vertical-align: top;
+}
+
+.middleAligned {
+
+    vertical-align: middle;
+}
+
+.absolutePos {
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.leftAligned {
+
+    text-align: left;
+    width: inherit;
+}
+
+.centerAligned {
+
+    text-align: center;
+    width: inherit;
+}
+
+.rightAligned {
+
+    text-align: right;
+    width: inherit;
+}
+
+.italicText {
+
+    font-style: italic;
+}
+
+.smallText {
+
+    font-size: 12px;
+    vertical-align: middle;
+    width: 33%;
+}
+
+.fullWidth {
+
+    width: 100%;
+}
+
+.fullHeight {
+
+    height: 100%;
+}
+
+.label {
+
+    font-weight: bold;
+}
+
+.value {
+
+    font-weight: normal;
+}
+
+.wrapText {
+
+    float: right;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.adSmall {
+
+    width: 80px;
+    height: 80px;
+}
+
+.adLarge {
+
+    width: 180px;
+    height: 180px;
+}
+
+.eventListItem {
+
+    height: 90%;
+    width: 90%;
+}
+
+.eventDetailLogo {
+
+    width: 20%;
+}
+
+.eventDetailText {
+
+    width: 60%;
+}
+
+.eventDetailActions {
+
+    width: 20%;
+}
+
+.eventHeader {
+
+    font-weight: bold;
+    width: 60%;
+    vertical-align: middle;
+}
+
+.eventSearch {
+
+    float: right;
+    vertical-align: middle;
+    right: 10px;
+}
+
+.invisible {
+
+    visibility: hidden;
+}
+
+.icon {
+
+    width: 20px;
+    height: 20px;
+}
+
+.spacing10px {
+
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.search-icon {
+
+    background-image: url("../resources/images/search-icon.png") !important;
+    width: 28px;
+    height: 28px;
+}
+
+.traffic-light {
+
+    width: 30%;
+    height: 30%;
+}
+
+.noborder {
+
+    border: none;
+}
+
+.threecolGrid {
+
+    width: 33%;
+}
+
+.twocolGrid {
+
+    width: 50%;
+}
+
+.rightFloating {
+
+    float: right;
+}
+
+.checkoutDetailText {
+
+    width: 40%;
+}
+
+.ui-datatable .ui-datatable-data td .orderActions {
+
+    border: none;
+}

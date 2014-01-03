@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" x="32" y="32" measuredWidth="92" measuredHeight="16"
+      name="Stars 5 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" x="32" y="64" measuredWidth="92" measuredHeight="16"
+      name="Stars 4 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" x="32" y="96" measuredWidth="92" measuredHeight="16"
+      name="Stars 3 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" x="32" y="128" measuredWidth="92" measuredHeight="16"
+      name="Stars 2 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" x="32" y="160" measuredWidth="92" measuredHeight="16"
+      name="Stars 1 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" x="32" y="192" measuredWidth="92" measuredHeight="16"
+      name="Stars 0 of 5">
+    <widgets xsi:type="model:Icon" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="19" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="38" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="57" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+    <widgets xsi:type="model:Icon" x="76" measuredWidth="16" measuredHeight="16" foreground="#999999"
+        icon="favorites (small)"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font name="Comic Sans MS" size="10"/>
+</model:Screen>

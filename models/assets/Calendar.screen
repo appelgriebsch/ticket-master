@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:WidgetGroup" x="100" y="100" measuredWidth="195" measuredHeight="189">
+    <widgets xsi:type="model:WidgetGroup" measuredWidth="195" measuredHeight="31">
+      <widgets xsi:type="model:Panel" width="195" height="31" measuredWidth="195" measuredHeight="31"/>
+      <widgets xsi:type="model:WidgetGroup" x="10" y="3" measuredWidth="175" measuredHeight="25">
+        <widgets xsi:type="model:Label" x="42" width="91" text="June 2010" measuredWidth="91" measuredHeight="25" textAlignment="Center">
+          <font bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Icon" y="5" measuredWidth="16" measuredHeight="16" icon="filled-arrow-left (small)"/>
+        <widgets xsi:type="model:Icon" x="159" y="5" measuredWidth="16" measuredHeight="16" icon="filled-arrow-right (small)"/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" y="28" measuredWidth="195" measuredHeight="161">
+      <widgets xsi:type="model:Panel" width="195" height="161" measuredWidth="195" measuredHeight="161"/>
+      <widgets xsi:type="model:WidgetGroup" x="10" y="5" measuredWidth="175" measuredHeight="150">
+        <widgets xsi:type="model:WidgetGroup" measuredWidth="175" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="S" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="M" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="T" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="W" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="100" width="25" text="T" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="125" width="25" text="F" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="150" width="25" text="S" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font bold="true"/>
+          </widgets>
+        </widgets>
+        <widgets xsi:type="model:WidgetGroup" x="50" y="25" measuredWidth="125" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="1" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="2" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="3" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="4" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="100" width="25" text="5" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+        </widgets>
+        <widgets xsi:type="model:WidgetGroup" y="50" measuredWidth="175" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="6" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="7" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="8" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="9" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="100" width="25" text="10" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="125" width="25" text="11" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="150" width="25" text="12" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+        </widgets>
+        <widgets xsi:type="model:WidgetGroup" y="75" measuredWidth="175" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="13" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="14" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="15" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="16" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="100" width="25" text="17" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="125" width="25" text="18" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="150" width="25" text="19" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+        </widgets>
+        <widgets xsi:type="model:WidgetGroup" y="100" measuredWidth="175" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="20" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="21" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="22" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="23" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="100" width="25" text="24" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="125" width="25" text="25" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="150" width="25" text="26" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+        </widgets>
+        <widgets xsi:type="model:WidgetGroup" y="125" measuredWidth="100" measuredHeight="25">
+          <widgets xsi:type="model:Label" width="25" text="27" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="25" width="25" text="28" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="50" width="25" text="29" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+          <widgets xsi:type="model:Label" x="75" width="25" text="30" measuredWidth="25" measuredHeight="25" textAlignment="Center">
+            <font/>
+          </widgets>
+        </widgets>
+      </widgets>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font/>
+</model:Screen>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" x="96" y="40" width="457" height="329" text="Google Chrome&#xA;http://www.ticketmaster.com/rating" measuredWidth="457" measuredHeight="329"/>
+  <hRuler/>
+  <vRuler/>
+  <font/>
+</model:Screen>

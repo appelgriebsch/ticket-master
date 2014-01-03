@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<artists>
+    <artist>
+        <stagename>David Garrett</stagename>
+        <firstname>David</firstname>
+        <lastname>Garrett</lastname>
+        <genre>Klassik</genre>
+    </artist>
+    <artist>
+        <stagename>Mario Barth</stagename>
+        <firstname>Mario</firstname>
+        <lastname>Barth</lastname>
+        <genre>Comedy</genre>
+    </artist>
+    <artist>
+        <stagename>Snow Patrol</stagename>
+        <firstname>Snow</firstname>
+        <lastname>Patrol</lastname>
+        <genre>Rock</genre>
+    </artist>
+    <artist>
+        <stagename>Sting</stagename>
+        <firstname>Gordon</firstname>
+        <lastname>Sumner</lastname>
+        <genre>Rock</genre>
+    </artist>
+    <artist>
+        <stagename>Bruce Springsteen</stagename>
+        <firstname>Bruce</firstname>
+        <lastname>Springsteen</lastname>
+        <genre>Rock</genre>
+    </artist>
+    <artist>
+        <stagename>Sascha Grammel</stagename>
+        <firstname>Sascha</firstname>
+        <lastname>Grammel</lastname>
+        <genre>Comedy</genre>
+    </artist>
+    <artist>
+        <stagename>Andrea Berg</stagename>
+        <firstname>Andrea</firstname>
+        <lastname>Berg</lastname>
+        <genre>Pop</genre>
+    </artist>
+    <artist>
+        <stagename>Die Ärzte</stagename>
+        <firstname>-</firstname>
+        <lastname>-</lastname>
+        <genre>Rock</genre>
+    </artist>
+    <artist>
+        <stagename>P!NK</stagename>
+        <firstname>-</firstname>
+        <lastname>-</lastname>
+        <genre>Pop</genre>
+    </artist>
+    <artist>
+        <stagename>Max Raabe</stagename>
+        <firstname>Max</firstname>
+        <lastname>Raabe</lastname>
+        <genre>Pop</genre>
+    </artist>
+    <artist>
+        <stagename>Helene Fischer</stagename>
+        <firstname>Helene</firstname>
+        <lastname>Fischer</lastname>
+        <genre>Pop</genre>
+    </artist>
+    <artist>
+        <stagename>DTM ESW</stagename>
+        <firstname>DTM</firstname>
+        <lastname>ESW</lastname>
+        <genre>Sport</genre>
+    </artist>
+    <artist>
+        <stagename>Dieter Nuhr</stagename>
+        <firstname>Dieter</firstname>
+        <lastname>Nuhr</lastname>
+        <genre>Comedy</genre>
+    </artist>
+    <artist>
+        <stagename>Udo Lindenberg</stagename>
+        <firstname>Udo</firstname>
+        <lastname>Lindenberg</lastname>
+        <genre>Pop</genre>
+    </artist>
+    <artist>
+        <stagename>König der Löwen</stagename>
+        <firstname>Disney</firstname>
+        <lastname>-</lastname>
+        <genre>Musical</genre>
+    </artist>
+</artists>

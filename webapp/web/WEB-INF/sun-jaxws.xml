@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
+    <endpoint
+            name="CustomerService"
+            implementation="de.fhdw.ify208.ticketmaster.service.CustomerServiceImpl"
+            url-pattern="/customerservice/*"/>
+    <endpoint
+            name="EventService"
+            implementation="de.fhdw.ify208.ticketmaster.service.EventServiceImpl"
+            url-pattern="/eventservice/*"/>
+    <endpoint
+            name="OrderService"
+            implementation="de.fhdw.ify208.ticketmaster.service.OrderServiceImpl"
+            url-pattern="/orderservice/*"/>
+</endpoints>

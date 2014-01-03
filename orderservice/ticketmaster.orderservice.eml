@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/test"/>
+	</contentEntry>
+	<lib name="junit-4.8.jar" scope="TEST"/>
+	<module name="ticketmaster.customerservice" scope="TEST"/>
+	<module name="ticketmaster.eventservice" scope="TEST"/>
+</component>

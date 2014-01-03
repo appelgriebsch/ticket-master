@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2.5-b01 .--><xs:schema version="1.0" targetNamespace="de.fhdw.ify208.ticketmaster.common.model" xmlns:tns="de.fhdw.ify208.ticketmaster.common.model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CancelOrder" type="tns:CancelOrder"/>
+  <xs:element name="CancelOrderResponse" type="tns:CancelOrderResponse"/>
+  <xs:element name="GetCustomerOrders" type="tns:GetCustomerOrders"/>
+  <xs:element name="GetCustomerOrdersResponse" type="tns:GetCustomerOrdersResponse"/>
+  <xs:element name="GetOrderStatuses" type="tns:GetOrderStatuses"/>
+  <xs:element name="GetOrderStatusesResponse" type="tns:GetOrderStatusesResponse"/>
+  <xs:element name="PlaceOrder" type="tns:PlaceOrder"/>
+  <xs:element name="PlaceOrderResponse" type="tns:PlaceOrderResponse"/>
+  <xs:element name="address" type="tns:addressDTO"/>
+  <xs:element name="artist" type="tns:artistDTO"/>
+  <xs:element name="artists" type="tns:artistListDTO"/>
+  <xs:element name="country" type="tns:countryDTO"/>
+  <xs:element name="customer" type="tns:customerDTO"/>
+  <xs:element name="event" type="tns:eventDTO"/>
+  <xs:element name="order" type="tns:orderDTO"/>
+  <xs:element name="orders" type="tns:orderListDTO"/>
+  <xs:element name="rating" type="tns:ratingDTO"/>
+  <xs:element name="ratings" type="tns:ratingListDTO"/>
+  <xs:element name="typecode" type="tns:typeCodeDTO"/>
+  <xs:element name="typecodes" type="tns:typeCodeListDTO"/>
+  <xs:complexType name="CancelOrder">
+    <xs:sequence>
+      <xs:element ref="tns:order" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="billingAddress" type="tns:addressDTO" minOccurs="0"/>
+          <xs:element ref="tns:customer" minOccurs="0"/>
+          <xs:element ref="tns:event" minOccurs="0"/>
+          <xs:element name="orderDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="orderQuantity" type="xs:int"/>
+          <xs:element name="orderStatus" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="shippingAddress" type="tns:addressDTO" minOccurs="0"/>
+          <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="baseDTO">
+    <xs:sequence>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+      <xs:element name="returncode" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addressDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="addressLine" type="xs:string" minOccurs="0"/>
+          <xs:element name="addressType" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="cityName" type="xs:string" minOccurs="0"/>
+          <xs:element ref="tns:country" minOccurs="0"/>
+          <xs:element name="district" type="xs:string" minOccurs="0"/>
+          <xs:element name="streetName" type="xs:string" minOccurs="0"/>
+          <xs:element name="zipCode" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:long" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="typeCodeDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:int" minOccurs="0"/>
+          <xs:element name="name" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="countryDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:typeCodeDTO">
+        <xs:sequence>
+          <xs:element name="isoCode" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="customerDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="birthdate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="email" type="xs:string" minOccurs="0"/>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="genderType" type="tns:genderType" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="password" type="xs:string" minOccurs="0"/>
+          <xs:element name="salutation" type="xs:string" minOccurs="0"/>
+          <xs:element name="status" type="tns:customerStatus" minOccurs="0"/>
+          <xs:element name="type" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="eventDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="adUrl" type="xs:string" minOccurs="0"/>
+          <xs:element ref="tns:artists" minOccurs="0"/>
+          <xs:element name="availableTickets" type="xs:int"/>
+          <xs:element name="avrgRating" type="xs:double"/>
+          <xs:element name="category" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="description" type="xs:string" minOccurs="0"/>
+          <xs:element name="endDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="eventStatus" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="location" type="tns:addressDTO" minOccurs="0"/>
+          <xs:element name="maxNoOfTickets" type="xs:int"/>
+          <xs:element ref="tns:ratings" minOccurs="0"/>
+          <xs:element name="startDate" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="ticketPrice" type="xs:decimal" minOccurs="0"/>
+          <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="artistListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:artist" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="artistDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="firstName" type="xs:string" minOccurs="0"/>
+          <xs:element name="genre" type="tns:typeCodeDTO" minOccurs="0"/>
+          <xs:element name="lastName" type="xs:string" minOccurs="0"/>
+          <xs:element name="stageName" type="xs:string" minOccurs="0"/>
+          <xs:element name="id" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ratingListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:rating" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ratingDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element name="comment" type="xs:string" minOccurs="0"/>
+          <xs:element name="rating" type="xs:double"/>
+          <xs:element name="timestamp" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="userName" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="CancelOrderResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:baseDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlaceOrder">
+    <xs:sequence>
+      <xs:element ref="tns:event" minOccurs="0"/>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+      <xs:element name="shippingTo" type="tns:addressDTO" minOccurs="0"/>
+      <xs:element name="billingTo" type="tns:addressDTO" minOccurs="0"/>
+      <xs:element name="quantity" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PlaceOrderResponse">
+    <xs:sequence>
+      <xs:element ref="tns:order" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerOrders">
+    <xs:sequence>
+      <xs:element ref="tns:customer" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCustomerOrdersResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:orderListDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="orderListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:order" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetOrderStatuses">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetOrderStatusesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:typeCodeListDTO" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="typeCodeListDTO">
+    <xs:complexContent>
+      <xs:extension base="tns:baseDTO">
+        <xs:sequence>
+          <xs:element ref="tns:typecode" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="genderType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male"/>
+      <xs:enumeration value="Female"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="customerStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Active"/>
+      <xs:enumeration value="Inactive"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
