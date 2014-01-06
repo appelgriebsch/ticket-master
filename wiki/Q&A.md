@@ -1,1 +1,0 @@
-* Datenbankabgleich durch HJ und MK
